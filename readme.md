@@ -14,7 +14,7 @@ EternityVRC is a simple desktop application centered around VRChat and  made wit
 4. Implement a Home menu (Account Switcher, and Profile Summary)
 5. Finish VRC api implementation for future use cases and expandability
 
-## Contribions
+## Contributions
 I welcome all Pull requests, if you have a major change please open an issue and write in detail why & how it will be implemented.
 
 ## License
