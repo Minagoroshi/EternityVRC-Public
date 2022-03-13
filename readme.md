@@ -18,4 +18,4 @@ EternityVRC is a simple desktop application centered around VRChat and  made wit
 I welcome all Pull requests, if you have a major change please open an issue and write in detail why & how it will be implemented.
 
 ## License
-[MIT](https://choosealicense.com/licenses/unlicense/)
+[Unlicense](https://choosealicense.com/licenses/unlicense/)
