@@ -6,7 +6,7 @@ EternityVRC is a simple desktop application centered around VRChat and  made wit
 ## Current Features
   - World Search
   - Player Search
-  - Avatar Search (Includes Asset URLs :> )
+  - Avatar Search
   - Friend Management
   - Friend Spam
 
