@@ -5,7 +5,7 @@ EternityVRC is a simple desktop application centered around VRChat and  made wit
 
 ## Preview
 
-![](https://cdn.discordapp.com/attachments/923305740196777994/952096347341869076/unknown.png)
+![](https://cdn.discordapp.com/attachments/917869621674143795/953210158182445066/unknown.png)
 
 ## EternityVRC Roadmap
 1. Flesh out the websocket logs to provide a more detailed list
