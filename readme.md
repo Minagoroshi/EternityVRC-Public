@@ -3,6 +3,13 @@
 EternityVRC is a simple desktop application centered around VRChat and  made with Go
 
 
+## Current Features
+  - World Search
+  - Player Search
+  - Avatar Search (Includes Asset URLs :> )
+  - Friend Management
+  - Friend Spam
+
 ## Preview
 
 ![](https://cdn.discordapp.com/attachments/917869621674143795/953210158182445066/unknown.png)
