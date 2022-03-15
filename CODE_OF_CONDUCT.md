@@ -1,22 +1,3 @@
-# EternityVRC Public
-
-EternityVRC is a simple desktop application centered around VRChat and  made with Go
-
-
-## Preview
-
-![](https://cdn.discordapp.com/attachments/923305740196777994/952096347341869076/unknown.png)
-
-## EternityVRC Roadmap
-1. Flesh out the websocket logs to provide a more detailed list
-2. Implement the Moderations tab and it's API components
-3. Implement Profile menu and its API components (Will allow for customization of VRC profile within the application)
-4. Implement a Home menu (Account Switcher, and Profile Summary)
-5. Finish VRC api implementation for future use cases and expandability
-
-## Contributions
-All pull requests are welcome big or small, if you have a major change please open an issue and write in detail why & how it will be implemented.
-
 # Contributor Covenant Code of Conduct
 
 ## Our Pledge
@@ -145,7 +126,3 @@ enforcement ladder](https://github.com/mozilla/diversity).
 For answers to common questions about this code of conduct, see the FAQ at
 https://www.contributor-covenant.org/faq. Translations are available at
 https://www.contributor-covenant.org/translations.
-
-
-## License
-[Unlicense](https://choosealicense.com/licenses/unlicense/)
