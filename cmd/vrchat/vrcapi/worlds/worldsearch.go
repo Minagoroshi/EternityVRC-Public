@@ -1,7 +1,7 @@
 package vrcworlds
 
 import (
-	"EternityGUI/cmd/vrchat/vrcapi"
+	"EternityGUI/shared"
 	"io"
 	"io/ioutil"
 	"log"
@@ -10,7 +10,7 @@ import (
 
 func WorldSearch(world string, token string) string {
 
-	url := vrcapi.BaseURL + "worlds?sort=popularity&n=100&order=descending&offset=0&search=" + world
+	url := shared.BaseURL + "worlds?sort=popularity&n=100&order=descending&offset=0&search=" + world
 	method := "GET"
 
 	client := &http.Client{}

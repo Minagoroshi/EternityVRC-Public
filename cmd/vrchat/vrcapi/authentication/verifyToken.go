@@ -1,7 +1,7 @@
 package vrcAuth
 
 import (
-	"EternityGUI/cmd/vrchat/vrcapi"
+	"EternityGUI/shared"
 	"io"
 	"io/ioutil"
 	"log"
@@ -9,7 +9,7 @@ import (
 )
 
 func VerifyToken() string {
-	url := vrcapi.BaseURL + "auth"
+	url := shared.BaseURL + "auth"
 	method := "GET"
 
 	client := &http.Client{}
@@ -20,7 +20,7 @@ func VerifyToken() string {
 	}
 	req.Header.Add("Content-Type", "application/json")
 	req.Header.Add("User-Agent", "Other")
-	req.Header.Add("Cookie", "apiKey=JlE5Jldo5Jibnk5O5hTx6XVqsJu4WJ26; auth="+vrcapi.AuthToken)
+	req.Header.Add("Cookie", "apiKey=JlE5Jldo5Jibnk5O5hTx6XVqsJu4WJ26; auth="+shared.AuthToken)
 	res, err := client.Do(req)
 	if err != nil {
 		log.Println(err)

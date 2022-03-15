@@ -1,10 +1,10 @@
 package main
 
 import (
-	"EternityGUI/cmd/vrchat/vrcapi"
 	"EternityGUI/cmd/vrchat/vrcapi/authentication"
 	vrcwss "EternityGUI/cmd/vrchat/vrcapi/websocket"
 	"EternityGUI/gui"
+	"EternityGUI/shared"
 	"EternityGUI/utils"
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/app"
@@ -24,9 +24,8 @@ func main() {
 	Icon, _ := fyne.LoadResourceFromURLString("https://i.ibb.co/Zfm7RvL/icon.png")
 	MainWindow := App.NewWindow("Eternity")
 	MainWindow.SetMaster()
-	MainWindow.Resize(fyne.NewSize(300, 220))
 	MainWindow.SetIcon(Icon)
-	go MainWindow.Resize(fyne.NewSize(1200, 700))
+	go MainWindow.Resize(fyne.NewSize(1000, 600))
 	go MainWindow.SetMainMenu(makeMenu(App, MainWindow))
 	MainWindow.SetContent(gui.VRChatScreen(MainWindow))
 	t := vrcAuth.VerifyToken()
@@ -40,7 +39,7 @@ func main() {
 
 	go func() {
 		time.Sleep(2 * time.Second)
-		vrcapi.C1 <- "Test Success!"
+		shared.C1 <- "Test Success!"
 	}()
 
 	MainWindow.ShowAndRun()

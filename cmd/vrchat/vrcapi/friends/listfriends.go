@@ -2,7 +2,7 @@ package vrcfriends
 
 import (
 	"EternityGUI/cmd/vrchat"
-	"EternityGUI/cmd/vrchat/vrcapi"
+	"EternityGUI/shared"
 	"EternityGUI/utils"
 	"github.com/buger/jsonparser"
 	"io"
@@ -16,7 +16,7 @@ import (
 func ListFriends() (string, bool) {
 	config := utils.ReadConfig()
 	token := config.VRChatLogin
-	url := vrcapi.BaseURL + "auth/user/friends?offset=0&n=100&offline=false"
+	url := shared.BaseURL + "auth/user/friends?offset=0&n=100&offline=false"
 	method := "GET"
 
 	client := &http.Client{}

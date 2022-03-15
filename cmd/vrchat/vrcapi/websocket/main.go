@@ -1,7 +1,7 @@
 package vrcwss
 
 import (
-	"EternityGUI/cmd/vrchat/vrcapi"
+	"EternityGUI/shared"
 	"EternityGUI/utils"
 	"github.com/project-vrcat/vrchat-go"
 	"github.com/project-vrcat/vrchat-go/events"
@@ -14,27 +14,27 @@ func InitClient() {
 	vrc.RegisterEvent(events.FriendUpdate, func(params interface{}) {
 		p := params.(events.FriendUpdateParams)
 		data := "Friend Update: " + p.User.DisplayName
-		vrcapi.FriendUpdate <- data
+		shared.FriendUpdate <- data
 	})
 	vrc.RegisterEvent(events.FriendLocation, func(params interface{}) {
 		p := params.(events.FriendLocationParams)
 		data := "Friend Location: " + p.User.DisplayName + " -> " + p.World.Name
-		vrcapi.FriendLocation <- data
+		shared.FriendLocation <- data
 	})
 	vrc.RegisterEvent(events.Notification, func(params interface{}) {
 		p := params.(events.NotificationParams)
 		data := "Notification: " + p.SenderUsername + " | " + p.Type
-		vrcapi.VRCNotification <- data
+		shared.VRCNotification <- data
 	})
 	vrc.RegisterEvent(events.FriendOnline, func(params interface{}) {
 		p := params.(events.FriendOnlineParams)
 		data := "Friend Online: " + p.User.DisplayName
-		vrcapi.FriendOnline <- data
+		shared.FriendOnline <- data
 	})
 	vrc.RegisterEvent(events.FriendOffline, func(params interface{}) {
 		p := params.(events.FriendOfflineParams)
 		data := "Friend Offline: " + p.UserID
-		vrcapi.FriendOffline <- data
+		shared.FriendOffline <- data
 	})
 
 	vrc.Pipeline.Connect(utils.ReadConfig().VRChatLogin)

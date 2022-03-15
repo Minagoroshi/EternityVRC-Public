@@ -1,7 +1,7 @@
 package vrcusers
 
 import (
-	"EternityGUI/cmd/vrchat/vrcapi"
+	"EternityGUI/shared"
 	"io"
 	"io/ioutil"
 	"log"
@@ -10,7 +10,7 @@ import (
 
 func PlayerSearch(player string, token string) string {
 
-	url := vrcapi.BaseURL + "users?offset=0&n=100&search=" + player
+	url := shared.BaseURL + "users?offset=0&n=100&search=" + player
 	method := "GET"
 
 	client := &http.Client{}

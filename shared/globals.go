@@ -1,4 +1,4 @@
-package vrcapi
+package shared
 
 import "EternityGUI/utils"
 
@@ -11,4 +11,5 @@ var (
 	VRCNotification = make(chan string)
 	FriendUpdate    = make(chan string)
 	C1              = make(chan string)
+	AccManager      = &utils.AccountManager{}
 )
