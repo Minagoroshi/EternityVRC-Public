@@ -17,6 +17,16 @@ func Startup() {
 			return
 		}
 	}
+
+	//Check friend spam account list
+	if _, err := os.Stat("friends.txt"); err != nil {
+		_, err = os.Create("friends.txt")
+		if err != nil {
+			return
+		}
+		log.Println("Friends List Made")
+	}
+
 	//Check config folder
 	if stat, err := os.Stat("./config"); err == nil && stat.IsDir() {
 		log.Println("Config directory loaded.")
